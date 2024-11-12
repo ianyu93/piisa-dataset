@@ -1,6 +1,6 @@
 # Retail Transactional Dataset
 
-*Team Name*: PIISA  
+*Team Name*: Customer-Care  
 *Dataset Link*: [bhavikjikadara/Retail-Transactional-Dataset](https://www.kaggle.com/datasets/bhavikjikadara/retail-transactional-dataset)
 
 This dataset contains information on retail transactions, providing insights into customer purchasing behavior, product preferences, and sales trends. It can be used for various data analysis and machine learning tasks, such as customer segmentation, sales forecasting, and market basket analysis.
