@@ -13,4 +13,6 @@ Link to the dataset: [tchebonenko/MedicalTranscriptions](https://huggingface.co/
 
 ## How to Download
 
-Follow the instructions provided on the dataset page.
+1. Create a Hugging Face account if you don't have one
+2. Log in to Hugging Face
+3. Follow the instructions provided on the dataset page
