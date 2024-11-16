@@ -14,7 +14,9 @@ To download and use this dataset, follow these steps:
 
 1. Ensure you have Python installed on your system.
 2. Install the required libraries:
--`datasets`
+`datasets`
+`jsonlines`
+`polars`
 3. Use the following Python code to load the dataset:
 ```python
 from datasets import load_dataset
@@ -23,5 +25,6 @@ dataset = load_dataset("ricardosantoss/ehrcomplete_icdfiltered")
 ```
 
 ## Notes 
+
 - This dataset contains sensitive medical information. Ensure you comply with all relevant data protection and privacy regulations when using this dataset.
 - The dataset includes train, validation, and test splits, with a total of approximately 48.7k records.

@@ -1,26 +1,50 @@
-# healthcare_dataset
+# Healthcare Dataset
 
 Team Name: Piiilumminators
 
-This dataset contains the following fields:
-- `text`: The text of the transcription
-- `Age`: The age of the patient at the time of admission, expressed in years.
-- `Gender`: Indicates the gender of the patient, either "Male" or "Female."
-- `Blood Type`: The patient's blood type, which can be one of the common blood types (e.g., "A+", "O-", etc.).
-- `Medical Condition`: This column specifies the primary medical condition or diagnosis associated with the patient, such as "Diabetes," "Hypertension," "Asthma," and more.
-- `Date of Admission`: The date on which the patient was admitted to the healthcare facility.
-- `Doctor`: The name of the doctor responsible for the patient's care during their admission.
-- `Hospital`: Identifies the healthcare facility or hospital where the patient was admitted.
-- `Insurance Provider`: This column indicates the patient's insurance provider, which can be one of several options, including "Aetna," "Blue Cross," "Cigna," "UnitedHealthcare," and "Medicare."
-- `Billing Amount`: The amount of money billed for the patient's healthcare services during their admission. This is expressed as a floating-point number.
-- `Room Number`: The room number where the patient was accommodated during their admission.
-- `Admission Type`: Specifies the type of admission, which can be "Emergency," "Elective," or "Urgent," reflecting the circumstances of the admission.
-- `Discharge Date`: The date on which the patient was discharged from the healthcare facility, based on the admission date and a random number of days within a realistic range.
-- `Medication`: Identifies a medication prescribed or administered to the patient during their admission. Examples include "Aspirin," "Ibuprofen," "Penicillin," "Paracetamol," and "Lipitor."
-- `Test Results`: Describes the results of a medical test conducted during the patient's admission. Possible values include "Normal," "Abnormal," or "Inconclusive," indicating the outcome of the test.
+This dataset contains healthcare records with the following fields:
+- `Age`: Patient's age at admission (in years)
+- `Gender`: Patient's gender ("Male" or "Female")
+- `Blood Type`: Patient's blood type (e.g., "A+", "O-")
+- `Medical Condition`: Primary diagnosis (e.g., "Diabetes", "Hypertension")
+- `Date of Admission`: Date of patient's admission
+- `Doctor`: Name of the attending doctor
+- `Hospital`: Name of the healthcare facility
+- `Insurance Provider`: Patient's insurance company
+- `Billing Amount`: Cost of healthcare services (float)
+- `Room Number`: Patient's room number during stay
+- `Admission Type`: Type of admission ("Emergency", "Elective", or "Urgent")
+- `Discharge Date`: Date of patient's discharge
+- `Medication`: Prescribed or administered medication
+- `Test Results`: Outcome of medical tests ("Normal", "Abnormal", or "Inconclusive")
 
 Link to the dataset: [prasad22/healthcare-dataset](https://www.kaggle.com/datasets/prasad22/healthcare-dataset?resource=download)
 
-## How to Download
+## How to Download and Use
 
-Follow the instructions provided on the dataset page.
+1. Ensure you have a Kaggle account and have set up the Kaggle API:
+   - Create a Kaggle account if you don't have one
+   - Go to 'Account' settings on Kaggle
+   - Scroll to 'API' section and click 'Create New API Token'
+   - This will download a `kaggle.json` file
+   - Place this file in `~/.kaggle/` on Linux/macOS or `C:\Users\<Windows-username>\.kaggle\` on Windows
+2. Install required libraries:
+`kaggle`
+`jsonlines`
+`polars`
+3. Use the following Python code to download and load the dataset:
+```python
+import kaggle
+import pandas as pd
+import os
+
+kaggle.api.dataset_download_files('prasad22/healthcare-dataset', path='.', unzip=True)
+
+df = pd.read_csv('healthcare_dataset.csv')
+```
+
+## Notes
+
+- This dataset contains 55,500 healthcare records.
+- ensure compliance with relevant data protection regulations.
+- The large size of this dataset (55,500 records) makes it suitable for various machine learning tasks in the healthcare domain.
