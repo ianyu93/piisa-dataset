@@ -23,7 +23,7 @@ def main():
         df = pl.read_parquet(
             "hf://datasets/rungalileo/MIT_Movies_w_inference/" + split_path
         )
-        # Convert to records and write as jsonlines
+
 
         records = df.select(["id", "text"]).iter_rows(named=True)
 
